@@ -641,6 +641,8 @@ class UnifiSite(UnifiClientBase):
     spectrumscan    = partialmethod(UnifiClientBase.request, 'GET', 'stat/spectrumscan')
     radiusprofiles  = partialmethod(UnifiClientBase.request, 'GET', 'rest/radiusprofile')
     account         = partialmethod(UnifiClientBase.request, 'GET', 'rest/account')
+    account_remove  = partialmethod(UnifiClientBase.request, 'DELETE', 'rest/account')
+    wlan            = partialmethod(UnifiClientBase.request, 'GET', 'rest/wlanconf')
 
     c_archive_events      = partialmethod(_api_cmd, 'evtmgr', 'archive-all-alarms')
 
