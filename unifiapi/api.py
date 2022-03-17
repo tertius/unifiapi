@@ -438,6 +438,9 @@ class UnifiClientBase(object):
         '''
         if params and method == 'GET':
             method = 'POST'
+        # Remove empty params
+        if method == 'GET':
+            params = None
 
         # UnifiOS hackish
         if self.proxy and x_proxy:
